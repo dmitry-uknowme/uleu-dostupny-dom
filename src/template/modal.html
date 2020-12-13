@@ -1,0 +1,30 @@
+<div class="modal__overlay">
+    <div class="modal">
+        <form class="modal__form">
+            <h2 class="modal__formTitle">
+                Для того что бы получить расчёт перейдите в удобный
+                <b>для вас мессенджер :</b>
+            </h2>
+            <div class="modal__formMessengers">
+                <img class="modal__formMessengersItem" src={telegram} />
+                <img class="modal__formMessengersItem" src={whatsapp} />
+            </div>
+            <h3 class="modal__formSubtitle">
+                Или же введите номер телефона для получения прайса в любом
+                удобном для вас мессенджере
+            </h3>
+            <div class="modal__formRow">
+                <label class="modal__formNameLabel">имя</label>
+                <input class="modal__formName" type="text" />
+                <label class="modal__formPhoneLabel">телефон</label>
+                <input class="modal__formPhone" type="text" />
+                <button class="modal__formBtn formBtn btn" onClick={onSubmit}>
+                    Получить расчет <br /> проекта уже сегодня
+                </button>
+            </div>
+        </form>
+        <div class="modal__close">
+            ×
+        </div>
+    </div>
+</div>

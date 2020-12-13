@@ -1,0 +1,153 @@
+.main
+    background: url(../../img/body__bg.png)
+    &__title
+        color: #4ca957
+        font-family: 'Quacker'
+        font-size: 78px
+        &Highlight
+            color: #000
+    &__body
+        display: flex
+        justify-content: center
+        flex-wrap: wrap
+        align-items: center
+        z-index: 11
+        position: relative
+    &__cloud
+        width: 100%
+        height: 100px
+        position: absolute
+        bottom: -5px
+        z-index: 10
+    &__btn
+        font-size: 24px
+        width: 270px
+        height: 90px
+    &__tagline
+        position: relative
+        z-index: 11
+        font-family: 'Quacker'
+        font-weight: 400
+        font-size: 65px
+        background: -webkit-linear-gradient(#906058, #cf9264)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+    &__features
+        height: 300px
+        padding-top: 40px
+        position: relative
+        color: #fff
+        background-image: url(../../img/main/main-footer__bg.png)
+        background-repeat: no-repeat
+        background-size: cover
+        .container
+            display: flex
+            justify-content: center
+            flex: 0 1 33.333%
+            flex-wrap: wrap
+            align-items: center
+
+        &Item
+            margin-top: 50px
+            margin-left: 150px
+            &:first-child
+                margin-left: 0
+            &Desc
+                text-transform: uppercase
+                font-weight: 500
+                &Highlight
+                    font-weight: 900
+    &__decor
+        &Left
+
+            position: absolute
+            left: 0
+            top: -70px
+
+        &Right
+
+            position: absolute
+            right: 0
+            top: -26px
+
+@media screen and (max-width: 991px)
+    .main
+        &__decor
+            &Right
+                height: 100px
+            &Left
+                height: 100px
+        &__title
+            margin-top: 20px
+        &__btn
+            margin-top: 20px
+        &__house
+            margin-top: 40px
+        &__body
+            flex-direction: column-reverse
+        &__features
+            background-image: url(../../img/main/main-footer-mobile__bg.png)
+            min-height: 380px
+            .container
+                justify-content: space-around
+            &Item
+                margin: 0
+                margin-top: 150px
+
+@media screen and (max-width: 767px)
+    .main
+        margin-top: 100px
+        &__body
+            margin-top: 0
+            margin-top: 80px
+        &__house
+            margin-top: 20px
+        &__cloud
+            left: 0
+            width: 96%
+            height: 200px
+            // bottom: -50px
+        &__features
+            background-image: url(../../img/main/main-footer-mobile__bg.png)
+            height: 200px
+            .container
+                flex-direction: column
+        &__btn
+            margin-top: 0
+        &__tagline
+            margin-top: 50px
+        &__features
+            display: flex
+            &Item
+                margin-top: 10px
+                display: flex
+                align-items: center
+                &Icon
+                    max-width: 125px
+                    max-height: 100px
+                &Desc
+                    font-size: 15px
+                    width: 200px
+
+@media screen and (max-width: 575px)
+    .main
+        &__cloud
+            left: 20px
+            bottom: -115px
+        &__title
+            font-size: 40px
+        &__house
+            width: 270px
+            height: 180px
+        &__btn
+            width: 180px
+            height: 60px
+            font-size: 15px
+        &__tagline
+            font-size: 40px
+        &__features
+            &Item
+                margin: 0
+                margin-top: 20px
+                &Desc
+                    font-size: 12px
