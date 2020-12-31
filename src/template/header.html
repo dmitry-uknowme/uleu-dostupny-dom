@@ -1,42 +1,84 @@
-	<header class="header">
-		<div class="container" style="display: flex; flex-wrap: wrap">
-			<FadeInLeft>
-				<a class="header__logo" href="./">
-					<img
-						class="header__logoImg wow rollIn"
-						src="./img/header/header__logo.png"
-						alt="Логотип"
-					/>
-				</a>
-			</FadeInLeft>
-			<FadeInRight>
-				<nav class="header__nav">
-					<ul class="header__menu">
-						<li class="header__menuItem">
-							<a class="header__menuLink" href="./"> Главная </a>
-						</li>
-						<li class="header__menuItem">
-							<a class="header__menuLink" href="./"> Наши проекты </a>
-						</li>
-						<li class="header__menuItem">
-							<a class="header__menuLink" href="./"> Отзывы </a>
-						</li>
-						<li class="header__menuItem">
-							<a class="header__menuLink" href="./"> Этапы работ </a>
-						</li>
-					</ul>
-				</nav>
-			</FadeInRight>
-			<div class="header__contacts">
-				<div class="header__contactsAddress">
-					Стерлитамак, <br />
-					ул. Профсоюзная 2к1
-				</div>
+<a href="#headerSection">
+	<svg class="progress-circle" viewBox="-10 -10 300 300">
+		<circle
+			class="progress-circle__range"
+			r="140"
+			cx="140"
+			cy="140"
+			fill="#8EE499"
+			fill-opacity="0"
+			stroke="#3FB14F"
+			stroke-width="20"
+		></circle>
+		<g transform="translate(200,180)">
+			<path
+				class="progress-circle__arrow"
+				stroke="#fff"
+				fill="#fff"
+				fill-opacity="1"
+				stroke-width="3"
+				d="M23.245 4l-11.245 14.374-11.219-14.374-.781.619 12 15.381 12-15.391-.755-.609z"
+			/>
+		</g>
+	</svg>
+</a>
+<!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 300 300">
+	<path
+		class="progress-circle__arrow"
+		d="M5 3l3.057-3 11.943 12-11.943 13
+  -3.057-3 9-9z"
+	/>
+</svg> -->
+
+<header
+	class="header"
+	id="headerSection"
+	data-aos="fade-up"
+	data-aos-delay="900"
+	data-aos-duration="1500"
+>
+	<!--  data-aos="fade-up" data-aos-delay="900" data-aos-duration="1500" -->
+	<div class="container" style="display: flex; flex-wrap: wrap">
+		<a class="header__logo" href="./">
+			<img
+				class="header__logoImg"
+				src="./img/header/header__logo.png"
+				alt="Логотип"
+				data-aos="fade"
+				data-aos-delay="1100"
+			/>
+		</a>
+
+		<nav class="header__nav" data-aos="slide-right" data-aos-delay="700">
+			<!-- data-aos="slide-right"
+						data-aos-delay="700" -->
+			<ul class="header__menu">
+				<li class="header__menuItem">
+					<a class="header__menuLink" href="./"> Главная </a>
+				</li>
+				<li class="header__menuItem">
+					<a class="header__menuLink" href="#projectsSection"> Наши проекты </a>
+				</li>
+				<li class="header__menuItem">
+					<a class="header__menuLink" href="#feedbackSection"> Отзывы </a>
+				</li>
+				<li class="header__menuItem">
+					<a class="header__menuLink" href="#stepsSection"> Этапы работ </a>
+				</li>
+			</ul>
+		</nav>
+
+		<div class="header__contacts" data-aos="slide-left" data-aos-delay="1000">
+			<div class="header__contactsAddress">
+				Стерлитамак, <br />
+				ул. Профсоюзная 2к1
+			</div>
+			<a class="header__contactsCall" href="tel:79659219000">
 				<div class="header__contactsPhone">
 					<h4 class="header__contactsPhoneText">8-965-921-9000</h4>
 					<h5 class="header__contactsPhoneFreecall">Бесплатный звонок!</h5>
 				</div>
-			</div>
+			</a>
 		</div>
-	</header>
-</div>
+	</div>
+</header>

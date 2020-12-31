@@ -1,0 +1,228 @@
+<section class="gallery anim anim-no-repeat">
+	<div class="gallery__row">
+		<SlideInLeft>
+			<div class="gallery__unselectedImages">
+				<div class="gallery__unselectedImagesRow">
+					<img
+						class="gallery__unselectedImagesItem gallery__img"
+						src="./img/gallery/gallery__img1.png"
+						data-id="1"
+						data-material="wood"
+					/>
+					<img
+						class="gallery__unselectedImagesItem gallery__img"
+						src="./img/gallery/gallery__img2.png"
+						data-id="2"
+						data-material="wood"
+					/>
+					<img
+						class="gallery__unselectedImagesItem gallery__img"
+						src="./img/gallery/gallery__img3.png"
+						data-id="3"
+						data-material="wood"
+					/>
+					<img
+						class="gallery__unselectedImagesItem gallery__img"
+						src="./img/gallery/gallery__img4.png"
+						data-id="4"
+						data-material="wood"
+					/>
+				</div>
+				<div class="gallery__unselectedImagesRow">
+					<img
+						class="gallery__unselectedImagesItem gallery__img"
+						src="./img/gallery/gallery__img5.png"
+						data-id="5"
+						data-material="rock"
+					/>
+					<img
+						class="gallery__unselectedImagesItem gallery__img"
+						src="./img/gallery/gallery__img6.png"
+						data-id="6"
+						data-material="rock"
+					/>
+					<img
+						class="gallery__unselectedImagesItem gallery__img"
+						src="./img/gallery/gallery__img7.png"
+						data-id="7"
+						data-material="rock"
+					/>
+					<img
+						class="gallery__unselectedImagesItem gallery__img"
+						src="./img/gallery/gallery__img8.png"
+						data-id="8"
+						data-material="rock"
+					/>
+				</div>
+			</div>
+		</SlideInLeft>
+		<div class="gallery__selectedImage">
+			<img
+				class="gallery__selectedImageItem gallery__img"
+				src="./img/gallery/gallery__img0.png"
+				data-id="0"
+			/>
+			<div class="gallery__selectors">
+				<div class="gallery__selectorsRock" data-material="rock">
+					Каменные Дома
+				</div>
+				<div class="gallery__selectorsWood" data-material="wood">
+					Деревянные Дома
+				</div>
+			</div>
+		</div>
+		<ZoomInRight>
+			<div class="gallery__desc">
+				<div class="gallery__descRow">
+					<div class="gallery__descWorks">
+						<h3 class="gallery__descWorksTitle">Состав работ :</h3>
+						<p class="gallery__descWorksText">
+							Проектирование, <br />
+							поставка материалы, <br />
+							строительство под ключ <br />
+						</p>
+					</div>
+					<div class="gallery__descWorks">
+						<h3 class="gallery__descWorksTitle">Квадратура :</h3>
+						<p class="gallery__descWorksText">204 кв/м</p>
+					</div>
+				</div>
+				<div class="gallery__descRow">
+					<div class="gallery__descWorks">
+						<h3 class="gallery__descWorksTitle">Материалы :</h3>
+						<p class="gallery__descWorksText">
+							Материал 1, <br />
+							материал 2, <br />
+							материал 3 <br />
+						</p>
+					</div>
+					<div class="gallery__descWorksDeadline">
+						<h3 class="gallery__descWorksTitle">Сроки :</h3>
+						<p class="gallery__descWorksText">2 месяца</p>
+					</div>
+				</div>
+				<div class="center">
+					<Pulse>
+						<button class="gallery__descBtn btn" onClick="{props.openModal}">
+							Скачать проект
+						</button>
+					</Pulse>
+				</div>
+			</div>
+		</ZoomInRight>
+	</div>
+</section>
+
+<section class="mobileGallery">
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<img
+					class="gallery__unselectedImagesItem"
+					src="./img/gallery/gallery__img1.png"
+					data-material="wood"
+				/>
+				<img
+					class="gallery__unselectedImagesItem"
+					src="./img/gallery/gallery__img2.png"
+					data-material="rock"
+				/>
+
+				<img
+					class="gallery__unselectedImagesItem"
+					src="./img/gallery/gallery__img3.png"
+					data-material="wood"
+				/>
+			</div>
+			<div class="swiper-slide">
+				<img
+					class="gallery__unselectedImagesItem"
+					src="./img/gallery/gallery__img4.png"
+					data-material="rock"
+				/>
+				<img
+					class="gallery__unselectedImagesItem"
+					src="./img/gallery/gallery__img5.png"
+					data-material="wood"
+				/>
+				<img
+					class="gallery__unselectedImagesItem"
+					src="./img/gallery/gallery__img6.png"
+					data-material="rock"
+				/>
+			</div>
+			<div class="swiper-slide">
+				<img
+					class="gallery__unselectedImagesItem"
+					src="./img/gallery/gallery__img7.png"
+					data-material="wood"
+				/>
+				<img
+					class="gallery__unselectedImagesItem"
+					src="./img/gallery/gallery__img8.png"
+					data-material="rock"
+				/>
+				<img
+					class="gallery__unselectedImagesItem"
+					src="./img/gallery/gallery__img0.png"
+					data-material="rock"
+				/>
+			</div>
+		</div>
+	</div>
+	<div class="gallery__selectedImage">
+		<img
+			class="gallery__selectedImageItem gallery__img"
+			src="./img/gallery/gallery__img0.png"
+		/>
+		<div class="gallery__selectors">
+			<div
+				class="gallery__selectorsRock gallery__selectorsActive"
+				data-material="rock"
+			>
+				Каменные <br />
+				Дома
+			</div>
+			<div class="gallery__selectorsWood" data-material="wood">
+				Деревянные <br />
+				Дома
+			</div>
+		</div>
+	</div>
+
+	<div class="center">
+		<div class="gallery__desc">
+			<div class="gallery__descRow">
+				<div class="gallery__descWorks">
+					<h3 class="gallery__descWorksTitle">Состав работ :</h3>
+					<p class="gallery__descWorksText">
+						Проектирование, <br />
+						поставка материалы, <br />
+						строительство под ключ <br />
+					</p>
+				</div>
+				<div class="gallery__descWorks">
+					<h3 class="gallery__descWorksTitle">Квадратура :</h3>
+					<p class="gallery__descWorksText">204 кв/м</p>
+				</div>
+			</div>
+			<div class="gallery__descRow">
+				<div class="gallery__descWorks">
+					<h3 class="gallery__descWorksTitle">Материалы :</h3>
+					<p class="gallery__descWorksText">
+						Материал 1, <br />
+						материал 2, <br />
+						материал 3 <br />
+					</p>
+				</div>
+				<div class="gallery__descWorksDeadline">
+					<h3 class="gallery__descWorksTitle">Сроки :</h3>
+					<p class="gallery__descWorksText">2 месяца</p>
+				</div>
+			</div>
+			<div class="center">
+				<button class="gallery__descBtn btn">Скачать проект</button>
+			</div>
+		</div>
+	</div>
+</section>

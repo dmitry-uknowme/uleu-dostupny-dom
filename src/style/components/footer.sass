@@ -1,7 +1,17 @@
+.mobileFooter
+    padding-bottom: 40px
+    padding-top: 20px
+    background: #f2f2f2
+    display: none
 .footer
+    padding-bottom: 40px
+    padding-top: 30px
+    background: #f2f2f2
+    position: relative
     margin-top: 100px
     &__info
         display: flex
+        align-items: center
         justify-content: space-around
         flex-wrap: wrap
     &__contacts
@@ -23,3 +33,44 @@
         font-size: 10px
         font-weight: 500
         text-transform: uppercase
+
+@media screen and ( max-width: 1200px )
+    .footer
+        &__info
+            flex-direction: column
+            justify-content: center
+        &__logo
+            margin-top: 20px
+        &__map
+            margin-top: 30px
+
+@media screen and ( max-width: 767px )
+    .mobileFooter
+        display: block
+    .footer
+        display: none
+        background: #f2f2f2
+        &__logo
+            margin-top: 30px
+        &__id
+            margin-top: 50px
+        &__info
+            max-width: 90%
+            margin: auto
+        &__map
+            margin-top: 20px
+            width: 90%
+        &__contacts
+            &Address
+                font-size: 15px
+                font-weight: 500
+            &Phone
+                text-align: center
+                font-size: 25px
+                font-weight: 900
+            &Tagline
+                font-size: 10px
+                font-weight: 500
+                color: #4ca957
+                text-transform: uppercase
+                text-align: center

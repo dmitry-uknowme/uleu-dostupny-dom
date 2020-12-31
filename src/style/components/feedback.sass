@@ -1,14 +1,15 @@
 .mobileFeedback
     display: none
+    &__topInfo
+        line-height: 0.7
 .feedback
     margin-top: 100px
-    padding-top: 2px
+    padding-top: 100px
     padding-bottom: 40px
     background: url(../../img/feedback/feedback__bg.png)
     background-size: cover
     position: relative
     &__row
-        margin-top: 100px
         display: flex
         justify-content: space-between
         flex-wrap: wrap
@@ -52,13 +53,25 @@
             bottom: 20px
             transform: rotate(180deg)
 
+@media screen and ( max-width: 1400px )
+    .feedback
+        &__review
+            &Up
+                position: absolute
+                right: 20px
+                top: 0
+            &Down
+                position: absolute
+                right: 20px
+                bottom: -20px
+                transform: rotate(180deg)
+
 @media screen and (max-width: 1199px)
     .feedback
         &__img
             margin-left: 25px
             width: 120px
             height: 120px
-
         &__review
             width: 80%
             margin: auto

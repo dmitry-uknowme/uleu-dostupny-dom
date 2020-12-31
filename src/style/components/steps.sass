@@ -1,6 +1,9 @@
 .mobileSteps
     display: none
+    .swiper-container
+        max-width: 90%
 .steps
+    overflow: hidden
     margin-top: 100px
     .offer
         padding-top: 100px
@@ -8,6 +11,16 @@
         width: 900px
         height: 480px
         max-width: 100%
+        .btn
+            width: 240px
+            height: 50px
+            &-waves
+                top: 92px
+            &-text
+                text-transform: uppercase
+                top: 20%
+                font-size: 14px
+                left: 18%
         &__form
             &Email
                 margin-top: 20px
@@ -58,13 +71,15 @@
             border-radius: 20px
             display: flex
             align-items: center
+            &:nth-child(2)
+                min-width: 500px
             &Title
                 text-align: left
                 margin-left: 40px
                 text-transform: uppercase
                 font-size: 25px
     &__form
-        background: url(../../img/steps/steps__bg.png) no-repeat
+        // background: url(../../img/steps/steps__bg.png) no-repeat
         display: flex
         flex-direction: column
         flex-wrap: wrap
@@ -107,29 +122,43 @@
         &__form
             &Title
                 font-size: 22px
-                max-width: 300px
+                max-width: 550px
                 margin: auto
                 &Subtitle
                     text-transform: uppercase
                     font-size: 13px
-                    max-width: 300px
+                    max-width: 400px
                     margin: auto
 
 @media screen and (max-width: 767px)
     .mobileSteps
         display: block
         margin-top: 80px
+
+        .offer
+            background-image: url(../../img/steps/steps__form-mobile-bg.png) !important
+            height: 320px
+            .btn
+                &-waves
+                    margin-left: -280px
+                    margin-top: -45px
+                &-text
+                    top: 24%
     .steps
         display: none
         margin-top: 100px
+
         &__title
             margin-bottom: 0px
-            font-size: 65px
+            font-size: 45px
         &__advancedSteps
             &Item
                 justify-content: space-around
-                width: 250px
+                width: 320px
                 margin: auto
+                &:nth-child(2)
+                    min-width: 200px
+
                 &Title
                     font-size: 15px
                 &Icon
@@ -146,7 +175,14 @@
                     font-size: 15px
                 &Icon
                     width: 60px
-
+        &__form
+            &Title
+                font-size: 22px
+            &Subtitle
+                font-size: 13px
+                margin-top: 10px
+            .offer
+                background: none
     .steps.swiper-slide
         width: 80%
         height: 50px !important

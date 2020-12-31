@@ -1,29 +1,45 @@
 .mobileProjects
     display: none
 .projects
-    max-width: 1170px
-    margin: auto
-    margin-top: 50px
+    margin-top: -35px
+    padding-top: 120px
+    padding-bottom: 80px
+    background: url(../../img/projects/projects__bg.png)
+    background-size: cover
+    .btn
+        &-waves
+            margin-top: -13px
+            margin-left: -257px
+        &-wave
+            transform: translate(0, 16px)
+        &-glow
+            transform: translate(41px, 10px)
+        &-text
+            width: 100%
+            // left: 50%
+            // margin-left: -135px
     &__title
         font-family: 'Quacker'
         font-weight: 400
         font-size: 75px
     .row
         margin-top: 30px
-        display: flex
+        // display: flex
     &__sizes
-        max-width: 1000px
-        margin: auto
         display: flex
-        flex-direction: column
+        justify-content: space-around
+        // max-width: 1000px
+        margin: auto
+        // display: flex
+        // flex-direction: column
         // flex: 0 1 20%
-        justify-content: space-between
+        // justify-content: space-between
         flex-wrap: wrap
         &Item
             transition: all 0.5s
             cursor: pointer
             padding: 5px 20px
-            margin: 20px
+            margin: 10px
             display: inline-block
             font-size: 35px
             font-weight: 700
@@ -51,7 +67,7 @@
             left: 50px
             height: 70px
             width: 120px
-            border: 1px solid #000
+            // border: 1px solid #000
             transform: rotate(4deg)
             &:nth-child(2)
                 left: 45px
@@ -105,6 +121,7 @@
         &Desc
             margin-left: 70px
             &Title
+                line-height: 0.6
                 font-family: 'Quacker'
                 font-weight: 400
                 font-size: 65px
@@ -113,15 +130,17 @@
                 text-transform: uppercase
                 line-height: 1
                 &Title
+                    margin-top: 30px
                     font-size: 30px
                     font-weight: 700
                 &Basic
                     margin-top: 30px
+                &Full
+                    margin-bottom: 60px
             &Btn
-                margin-top: 25px
                 line-height: 1.65
                 width: 240px
-                height: 50px
+                height: 60px
                 font-size: 15px
     &__gallery
         display: none
@@ -142,6 +161,44 @@
                 width: 24px
                 height: 40px
 
+@media screen and (max-width: 1200px)
+    .mobileProjects
+        padding-bottom: 100px
+        display: block
+        .btn
+            &-text
+                left: 11%
+            &-waves
+                margin-top: -46px
+        .row
+            display: flex
+    .projects
+        display: none
+        &__title
+            font-size: 40px
+
+        &__sizes
+            margin-top: 10px
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            &Item
+                margin-top: 5px
+                font-size: 15px
+        &__preview
+            &Desc
+                width: 100%
+                margin: auto
+                &Title
+                    display: none
+                &Plans
+                    font-size: 15px
+                    text-align: center
+                    &Title
+                        font-size: 20px
+                    &Basic
+                        margin-top: 10px
+
 @media screen and (max-width: 991px)
     .projects
         &__title
@@ -158,14 +215,17 @@
                     text-align: center
 
 @media screen and (max-width: 767px)
-    .projects
-        display: none
     .mobileProjects
-        display: block
+        .btn
+            &-waves
+                margin-top: -43px
+                margin-left: -258px
+            &-text
+                left: 10%
         &__title
-            font-size: 40px
+            font-size: 15px
         .row
-            display: flex
+            // display: flex
         &__sizes
 
             margin-top: 10px
@@ -174,8 +234,10 @@
             justify-content: space-between
             &Item
                 margin-top: 5px
-                font-size: 15px
+                font-size: 27px
+    .projects
         &__preview
+            margin-top: 10px
             &Desc
                 width: 100%
                 margin: auto

@@ -1,0 +1,188 @@
+<section class="steps">
+	<h2 class="steps__title">Этапы работы</h2>
+	<SlideInRight>
+		<div class="steps__basicSteps">
+			<div class="steps__basicStepsItem">
+				<img
+					class="steps__basicStepsItemIcon"
+					src="./img/steps/steps__qa.png"
+				/>
+				<h3 class="steps__basicStepsItemTitle">
+					Обсуждение <br />
+					Проекта
+				</h3>
+			</div>
+			<div class="steps__basicStepsItem">
+				<img
+					class="steps__basicStepsItemIcon"
+					src="./img/steps/steps__process.png"
+				/>
+				<h3 class="steps__basicStepsItemTitle">
+					Разработка <br />
+					Планировки
+				</h3>
+			</div>
+			<div class="steps__basicStepsItem">
+				<img
+					class="steps__basicStepsItemIcon"
+					src="./img/steps/steps__economy-forecast.png"
+				/>
+				<h3 class="steps__basicStepsItemTitle">
+					Составление <br />
+					Сметы
+				</h3>
+			</div>
+		</div>
+		<div class="steps__advancedSteps">
+			<div class="steps__advancedStepsItem">
+				<img
+					class="steps__advancedStepsItemIcon"
+					src="./img/steps/steps__contract.png"
+				/>
+				<h3 class="steps__advancedStepsItemTitle">
+					Заключаем <br />
+					Договор
+				</h3>
+			</div>
+			<div class="steps__advancedStepsItem" style="min-width: 500px">
+				<img
+					class="steps__advancedStepsItemIcon"
+					src="./img/steps/steps__sketch.png"
+				/>
+				<h3 class="steps__advancedStepsItemTitle">
+					Подготовительные <br />
+					Строительные <br />
+					Работы
+				</h3>
+			</div>
+			<div class="steps__advancedStepsItem">
+				<img
+					class="steps__advancedStepsItemIcon"
+					src="./img/steps/steps__construction.png"
+				/>
+				<h3 class="steps__advancedStepsItemTitle">Стройка</h3>
+			</div>
+		</div>
+	</SlideInRight>
+	<div class="container">
+		<section class="offer">
+			<h2 class="steps__formTitle">
+				Узнайте о типичных ошибках заказчика при строительстве дома
+			</h2>
+			<h3 class="steps__formSubtitle">
+				Подпишитесь на информационную рассылку
+			</h3>
+			<form class="offer__form">
+				<div class="center">
+					<input
+						class="offer__formEmail input"
+						type="text"
+						placeholder="Ваш Email"
+					/>
+				</div>
+				<div class="center">
+					<Pulse>
+						<button class="offer__formBtn formBtn btn" type="button">
+							Заказать звонок
+						</button>
+					</Pulse>
+				</div>
+			</form>
+		</section>
+	</div>
+</section>
+
+<section class="mobileSteps">
+	<h2 class="steps__title">Этапы работы</h2>
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<div class="steps__basicStepsItem">
+					<img
+						class="steps__basicStepsItemIcon"
+						src="./img/steps/steps__qa.png"
+					/>
+					<h3 class="steps__basicStepsItemTitle">
+						Обсуждение <br />
+						Проекта
+					</h3>
+				</div>
+			</div>
+			<div class="swiper-slide">
+				<div class="steps__basicStepsItem">
+					<img
+						class="steps__basicStepsItemIcon"
+						src="./img/steps/steps__process.png"
+					/>
+					<h3 class="steps__basicStepsItemTitle">
+						Разработка <br />
+						Планировки
+					</h3>
+				</div>
+			</div>
+			<div class="swiper-slide">
+				<div class="steps__basicStepsItem">
+					<img
+						class="steps__basicStepsItemIcon"
+						src="./img/steps/steps__economy-forecast.png"
+					/>
+					<h3 class="steps__basicStepsItemTitle">
+						Составление <br />
+						Сметы
+					</h3>
+				</div>
+			</div>
+			<div class="swiper-slide">
+				<div class="steps__advancedStepsItem">
+					<img
+						class="steps__advancedStepsItemIcon"
+						src="./img/steps/steps__sketch.png"
+					/>
+					<h3 class="steps__advancedStepsItemTitle">
+						Подготовительные <br />
+						Строительные <br />
+						Работы
+					</h3>
+				</div>
+			</div>
+			<div class="swiper-slide">
+				<div class="steps__advancedStepsItem">
+					<img
+						class="steps__advancedStepsItemIcon"
+						src="./img/steps/steps__construction.png"
+					/>
+					<h3 class="steps__advancedStepsItemTitle">Стройка</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<section class="offer">
+			<h2 class="steps__formTitle">
+				Узнайте о типичных ошибках заказчика при строительстве дома
+			</h2>
+			<h3 class="steps__formSubtitle">
+				Подпишитесь на информационную рассылку
+			</h3>
+			<form class="offer__form">
+				<div class="center">
+					<input
+						class="offer__formEmail input"
+						type="text"
+						placeholder="Ваш Email"
+					/>
+				</div>
+				<div class="center">
+					<button
+						class="offer__formBtn formBtn btn"
+						type="button"
+						onClick="{props.openModal}"
+					>
+						Заказать звонок
+					</button>
+				</div>
+			</form>
+		</section>
+	</div>
+</section>

@@ -1,7 +1,22 @@
 .mobileGallery
     display: none
 .gallery
-    margin-top: 100px
+    background: url(../../img/projects/projects__bg.png)
+    .btn
+        width: 280px
+        &-waves
+            margin-top: -51px
+            margin-left: -290px
+        &-wave
+            transform: translate(0, 66px)
+            display: none
+        &-glow
+            transform: translate(35px, 56px)
+        &-text
+            top: 23%
+            left: 14%
+            font-size: 20px
+            // width: 100%
     &__swiper
         height: 80px
         width: 98%
@@ -20,19 +35,21 @@
             display: flex
             flex-direction: column
         &Item
+            cursor: pointer
             width: 220px
             height: 140px
             margin: 0
             padding: 0
     &__selectedImage
+        cursor: pointer
         transition: all 0.5s
         width: 920px
-        height: 570px
+        height: 545px
         position: relative
         &Item
             margin-top: 15px
             width: 100%
-            height: 558px
+            height: 545px
     &__selectors
         cursor: pointer
         text-transform: uppercase
@@ -66,8 +83,8 @@
             color: #fff
 
     &__desc
-        // display: flex
-        margin-top: 60px
+        background: url(../../img/gallery/gallery__bg.png)
+        height: 560px
         &Row
             // margin-top: 20px
             display: flex
@@ -91,10 +108,13 @@
                 margin-left: 110px
         &Btn
             margin-top: 30px
-            font-size: 25px
+            font-size: 24px
 
 @media screen and (max-width: 1800px)
     .gallery
+        .btn
+            &-glow
+                transform: translate(57px, 56px)
         &__selectedImage
             width: 736px
             &Item
@@ -127,10 +147,25 @@
     .gallery
         display: none
     .mobileGallery
-        margin-top: 200px
+        height: 900px
+        margin-top: 30px
         display: block
+        .btn
+            &-waves
+                margin-top: -16px
+            &-glow
+                transform: translate(41px, 6px)
+        .swiper-container
+            width: 98%
+            margin: auto
     .gallery
-        margin-top: 150px
+        &__selectedImage
+            width: 100%
+            // height: 340px
+            margin: auto
+            &item
+                max-width: 90px
+                height: 340px
         &__selectors
 
             font-size: 15px
@@ -144,16 +179,8 @@
                 line-height: 2
                 max-height: 100
                 top: -152px
-
-        &__selectedImage
-            width: 98%
-            // height: 340px
-            margin: auto
-            &item
-                max-width: 90px
-                height: 340px
         &__unselectedImages
-            max-width: 98%
+            max-width: 90%
             margin: auto
             height: 50px
             &Item
@@ -161,6 +188,9 @@
 
                 height: 80px
         &__desc
+            background: none
+            font-size: 15px
+            background: none
             max-width: 100%
             margin: auto
             &Row

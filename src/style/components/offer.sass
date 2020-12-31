@@ -3,22 +3,43 @@
     height: 288px
     max-width: 1000px
     margin: auto
+    .btn
+        width: 290px
+        height: 54px
+        &-waves
+            margin-top: -127px
+        &-text
+            top: 3px
+            line-height: 2
+            position: absolute
+            left: 25%
+            width: 150px
+            margin: auto
+
+            font-size: 12px
+            text-transform: none
     &__title
+        padding-top: 10px
         text-transform: uppercase
     &__form
         display: flex
         flex-direction: column
         flex-wrap: wrap
         &Name
-            margin-top: 20px
+            margin-top: 5px
         &Phone
             margin-top: 20px
         &Btn
             width: 270px
             margin-top: 15px
-            text-transform: none !important
+            text-transform: none
 
 @media screen and ( max-width:767px  )
     .offer
         background: #f1f1f1
-        height: 620px
+        height: 420px
+        padding-top: 30px
+        &__form
+            margin-top: 20px
+            &Btn
+                margin-top: 20px

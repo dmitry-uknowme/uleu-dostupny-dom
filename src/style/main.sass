@@ -1,29 +1,28 @@
 @import config
-@import "my"
 
 @font-face
     font-family: 'Quacker'
     src: url("../fonts/Quacker-Regular.otf")
 
-@font-face
-    font-family: 'Montserrat'
-    src: url("../fonts/Montserrat-Regular.ttf")
+// @font-face
+//     font-family: 'Montserrat'
+//     src: url("../fonts/Montserrat-Regular.ttf")
 
-@font-face
-    font-family: "Montserrat-Medium"
-    src: url("../fonts/Montserrat-Medium.ttf")
+// @font-face
+//     font-family: "Montserrat-Medium"
+//     src: url("../fonts/Montserrat-Medium.ttf")
 
-@font-face
-    font-family: "Montserrat-Bold"
-    src: url("../fonts/Montserrat-Bold.ttf")
+// @font-face
+//     font-family: "Montserrat-Bold"
+//     src: url("../fonts/Montserrat-Bold.ttf")
 
-@font-face
-    font-family: "Montserrat-ExtraBold"
-    src: url("../fonts/Montserrat-ExtraBold.ttf")
+// @font-face
+//     font-family: "Montserrat-ExtraBold"
+//     src: url("../fonts/Montserrat-ExtraBold.ttf")
 
-@font-face
-    font-family: "Montserrat-Black"
-    src: url("../fonts/Montserrat-Black.ttf")
+// @font-face
+//     font-family: "Montserrat-Black"
+//     src: url("../fonts/Montserrat-Black.ttf")
 
 *
     outline: none
@@ -33,8 +32,15 @@
 .container
     max-width: 1170px
     margin: auto
+
+html
+    scroll-behavior: smooth
+
 body
-    background: url(../../img/body__bg.png)
+    background: url(../../img/body__bg1.png)
+    // background-position: 50% 50%
+    background-repeat: no-repeat
+    // background-size: contain
     width: 100%
     height: 100%
     color: #000
@@ -42,6 +48,11 @@ body
     font-weight: 400
     position: relative
     z-index: -10
+    overflow-x: hidden
+
+@media screen and ( max-width: 767px )
+    body
+        background: none
 
 h1, h2, h3
     text-align: center
@@ -52,19 +63,49 @@ li
 a
     text-decoration: none
 
-.btn
-    border: none
-    color: #fff
-    padding: 10px 20px
-    text-transform: uppercase
-    font-weight: 700
-    border-radius: 50px
-    background-image: radial-gradient(#91e59a, #4ca957)
-    box-shadow: 0 7px 1px #229731
-    box-shadow:
-    position: relative
-    z-index: 1
-    cursor: pointer
+.btn-bg
+    background: #000
+    position: absolute
+    z-index: 2
+    left: 780px
+    top: 150px
+    width: 300px
+    height: 280px
+    // &__flare
+    //     // background: red
+    //     position: absolute
+    //     width: 270px
+    //     height: 90px
+    //     right: 120px
+    //     z-index: 2
+
+@keyframes slideme
+    0%
+        width: 20px
+        left: -30px
+        margin-left: 0
+        opacity: 1
+
+    30%
+        left: 100%
+        width: 5px
+        opacity: 0.5
+
+    100%
+        width: 0
+        left: 100%
+
+        opacity: 0
+
+@keyframes pulse
+    0%
+        transform: scale3d(1, 1, 1)
+    50%
+        transform: scale3d(1.03, 1.03, 1.03)
+
+    100%
+        transform: scale3d(0.99, 0.99, 0.99)
+
 .input
     text-align: center
     text-transform: uppercase
@@ -76,7 +117,6 @@ a
     background-image: linear-gradient(#a9a9a9, #bababa)
     &::placeholder
         color: #fff
-
 .center
     display: flex
     justify-content: center
@@ -100,3 +140,157 @@ a
 @media screen and (max-width: 576px)
     .container
         max-width: 100%
+
+.editorial
+    transform: rotate(180deg)
+    z-index: 11
+    position: absolute
+    top: 40%
+    right: 150px
+    display: block
+    width: 300px
+    height: 40px
+    margin: auto
+    max-height: 100vh
+
+::selection
+    background-color: salmon
+    color: white
+.parallax > use
+    filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.4))
+    animation: move-forever 12s linear infinite
+    &:nth-child(1)
+        animation-delay: -2s
+    &:nth-child(2)
+        animation-delay: -2s
+        animation-duration: 5s
+    &:nth-child(3)
+        animation-delay: -4s
+        animation-duration: 3s
+
+@keyframes move-forever
+    0%
+        transform: translate(-90px , 0%)
+    100%
+        transform: translate(85px , 0%)
+
+@keyframes color-changing
+    0%
+        color: #fff
+    20%
+        color: #229731
+    80%
+        color: #fff
+    100%
+        color: #229731
+
+.btn
+    font-size: 24px
+    text-decoration: none
+    overflow: hidden
+    // border: none
+    color: transparent
+    padding: 10px 20px
+    padding-bottom: 15px
+    text-transform: uppercase
+    text-align: center
+    font-weight: 700
+    border-radius: 50px
+    background-image: radial-gradient(#91e59a, #4ca957)
+    box-shadow: 0 7px 1px #229731
+    position: relative
+    // z-index: 1
+    // cursor: pointer
+    animation: pulse 2.5s ease-in-out infinite
+    &:hover
+        color: transparent
+    // &::after
+    //     content: ""
+    //     display: block
+    //     width: 10px
+    //     height: 120%
+    //     margin-left: 60px
+    //     background: #fff
+    //     position: absolute
+    //     left: -40px
+    //     top: 0
+    //     z-index: 1
+    //     transform: rotate(45deg)
+    //     transition: all .1s
+    //     animation-name: slideme
+    //     animation-duration: 2s
+    //     animation-delay: 50ms
+    //     animation-timing-function: ease-in-out
+    //     animation-iteration-count: infinite
+    &-waves
+        // background: #000
+        // pointer-events: none
+        // z-index: 10
+        // height: 110%
+        // width: 400%
+        // left: -300%
+        // top: 25px
+        margin-top: -50px
+        margin-left: -234px
+        position: absolute
+        fill: none
+        stroke: #fff
+        stroke-miterlimit: 10
+        stroke-width: 1px
+    &-wave
+        transform: translate(0, 48px)
+    &-glow
+        transform: translate(41px, 42px)
+        // transform: rotate(180deg)
+
+        // & >  use
+        //     animation: move-forever 8s linear infinite
+        //     &:nth-child(1)
+        //         // animation-delay: -2s
+        //     &:nth-child(2)
+        //         animation-delay: -2s
+        //         animation-duration: 5s
+        //     &:nth-child(3)
+        //         animation-delay: -4s
+        //         animation-duration: 3s
+    &-text
+        pointer-events: none
+        position: absolute
+
+        top: 10px
+
+        text-transform: uppercase
+        font-weight: 700
+        z-index: 15
+        color: #fff
+.progress-circle
+    transition: all 0.8s
+    width: 90px
+    height: 90px
+    position: fixed
+    z-index: 10000
+    right: 50px
+    bottom: 100px
+    &__range
+        transition: all 0.8s
+    &__arrow
+        left: 20px
+        position: absolute
+        transform: scale(5) rotate(180deg)
+        height: 20px
+        width: 20px
+
+::-webkit-scrollbar
+    width: 15px
+    background: transparent
+
+::-webkit-scrollbar-thumb
+    background: orange
+    border-radius: 10px
+    margin: 0 auto
+    width: 5px
+
+::-webkit-scrollbar-track
+    background-color: #00630c
+
+@import "my"

@@ -1,0 +1,42 @@
+<svg
+		class="btn-waves"
+		xmlns="http://www.w3.org/2000/svg"
+		xmlns:xlink="http://www.w3.org/1999/xlink"
+		viewBox="0 24 150 28"
+		preserveAspectRatio="none"
+	>
+		<defs>
+			<filter id="f1" x="0" y="0" width="200%" height="200%">
+				<feOffset result="offOut" in="SourceGraphic" dx="20" dy="20" />
+				<feBlend in="SourceGraphic" in2="offOut" mode="normal" />
+			</filter>
+			<radialGradient id="whiteGradient">
+				<stop
+					offset="40%"
+					stop-color="#fff"
+					stop-opacity="1"
+					stroke-width="5"
+				/>
+				<stop
+					offset="60%"
+					stop-color="#fff"
+					stop-opacity="1"
+					stroke-width="5"
+				/>
+			</radialGradient>
+			<path
+				id="gentle-wave"
+				d="M0,32L120,32C240,32,480,32,720,48C960,64,1200,96,1320,112L1440,128L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
+			/>
+		</defs>
+		<g class="parallax">
+			<use
+				xlink:href="#gentle-wave"
+				x="50"
+				y="0"
+				fill="url('#whiteGradient')"
+				filter="url('#f1')"
+				fill-opacity="1"
+			/>
+		</g>
+	</svg>
